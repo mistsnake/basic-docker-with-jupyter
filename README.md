@@ -2,7 +2,7 @@
 https://www.docker.com/get-started/
 
 ## 2. Download this repository's files
-In order to continue to create the Docker image and container, download this repository's jupyter-testing-main file.
+In order to continue to create the Docker image and container, download this repository's `jupyter-testing-main` file.
 
 ## 3. Creating the image
 Use the following command to build the docker image called `jupyter`:
