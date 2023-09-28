@@ -1,5 +1,8 @@
 ## 1. Install Docker Desktop
+If Docker is not already installed, download it for your device at:
 https://www.docker.com/get-started/
+
+Before continuing, open Docker and make sure it is running.
 
 ## 2. Download this repository's files
 In order to continue to create the Docker image and container, download this repository's `jupyter-testing-main` file.
