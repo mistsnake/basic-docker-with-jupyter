@@ -11,7 +11,7 @@ Before continuing, make sure you are in the `jupyter-testing-main` directory in 
 
 ## 3. Creating the image
 
-**If wanting to upload image to Docker, have your `<image_name>` be `docker_username/repository_name` in order to upload to Docker Hub** 
+**If wanting to upload image to Docker, have your `<image_name>` be `your_docker_username/your_repository_name` in order to upload to Docker Hub** 
 
 Use the following command to build a docker image of name `<image_name>`:
 ```
@@ -50,4 +50,11 @@ docker ps
 to get a list of running containers and their respective names. Then execute the following command to get into the container:
 ```
 docker exec -it <container_name> /bin/bash
+```
+## 7. Pushing image to Docker Hub
+
+use the following command
+
+```
+docker push your_docker_username/your_repository_name
 ```
