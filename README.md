@@ -10,19 +10,19 @@ In order to continue to create the Docker image and container, download this rep
 Before continuing, make sure you are in the `jupyter-testing-main` directory in your device.
 
 ## 3. Creating the image
-Use the following command to build the docker image called `jupyter`:
+Use the following command to build a docker image of name `<image_name>`:
 ```
-docker build -t jupyter .
+docker build -t <image_name> .
 ```
 
-The `-t` flag specifies that we want to give the image a specific name (in our case `jupyter`). 
+The `-t` flag specifies that we want to give the image a specific name `<image_name>`. 
 
 The `.` at the end of the command specifies the directory in which the *Dockerfile* lies. In our case this is our current working directory which we specify with a dot.
 
 ## 4. Start the container
 Use the following command to start the container:
 ```
-docker run -it -p 8888:8888 -v "$(pwd)/project:/project" jupyter
+docker run -it -p 8888:8888 -v "$(pwd)/project:/project" <image_name>
 ```
 
 The `-it` flag specifies to run the container in interactive mode (i.e. printing the output of the container to our shell). 
@@ -31,7 +31,7 @@ The `-p` flag specifies that we map port 8888 of the container (the one after th
 
 The `-v` flag specifies that we want to share a folder with the container, meaning that files can be exchanged instantly and also persist on our host machine after the container is stopped. The part before the `:` specifies the folder *project* in our currend working directory (hence `$(pwd)`) as our endpoint of the folder sharing. The part after the `:` specifies the absolute path of the respective endpoint in the container. It is also the directory the container is already using (as specified in the Dockerfile) which means that all files in the project folder will be visible when starting jupyter notebook. 
 
-The `jupyter` at the end is the name of the image we want to use.
+The `<image_name>` at the end is the name of the image we want to use.
 
 ## 4. Accessing the notebook
 The container prints the jupyter kernel log into the terminal. Opening the link `http://127.0.0.1:8888/?token=...` in a browser opens the frontend of the jupyter server created by the container. You can now simply use jupyter notebooks as if it ran on your on machine (which it still does, technically, but the container does not know that and therefore we must act as if it didn't).
