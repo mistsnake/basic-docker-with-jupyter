@@ -9,6 +9,12 @@ In order to continue to create the Docker image and container, download this rep
 
 Before continuing, make sure you are in the `jupyter-testing-main` directory in your device (you can change the name of this directory if you like).
 
+In `jupyter-testing-main` there is a Dockerfile that contains the instructions for Docker to create an ubuntu-based image; this can be changed, but with caution as the changes may not work with how I have written it (**you can leave this alone though**, I believe it should work properly with any jupyter notebook). 
+
+There is also a `requirements.txt` that contains the names of the necessary libraries to run the jupyter notebook inside `project`. If changing the notebook inside `project` with your own, make sure `requirements.txt` contains all the libraries you need so that Docker downloads them into the image. The libraries **must have the name you would use when using `pip install <library>`** as pip is what my Dockerfile has specified as its installer.
+
+Inside `project` exists my jupyter notebook and a picklefile. These can be removed and replaced with a jupyter notebook of your choice and any accompanying files your project will need. 
+
 ## 3. Creating the image
 
 **If wanting to upload image to Docker, have your `<image_name>` be `your_docker_username/your_repository_name` in order to upload to Docker Hub** 
