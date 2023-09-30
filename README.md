@@ -43,10 +43,10 @@ The `-v` flag specifies that we want to share a folder with the container, meani
 The `<image_name>` at the end is the name of the image we want to use.
 
 ## 4. Accessing the notebook
-The container prints the jupyter kernel log into the terminal. Opening the link `http://127.0.0.1:8888/?token=...` in a browser opens the frontend of the jupyter server created by the container. You can now simply use jupyter notebooks as if it ran on your on machine (which it still does, technically, but the container does not know that and therefore we must act as if it didn't).
+The container prints the jupyter kernel log into the terminal. Opening the link `http://127.0.0.1:8888/?token=...` in a browser opens the jupyter-notebook site for your container. Now you can use jupyter notebook as if it ran on your on machine.
 
 ## 5. Stopping the Container
-Simply press `CTRL+C` in the terminal displaying the jupyter notebook kernel and confirm with `y`. This should stop the container. If it does not, open another terminal, run `docker ps` to get a list of running containers and their respective names. Then run `docker stop <container_name>`. The container name is something like *stoic_hamilton* and is automatically assigned to a container when it is started. If that also does not work, run `docker kill <container_name>`. 
+Simply press `CTRL+C` in the terminal displaying the jupyter notebook kernel and confirm with `y`. This should stop the container. If it does not, in a different terminal, run `docker ps` to get a list of running containers and their respective names. Then run `docker stop <container_name>`. The container name is something like *stoic_hamilton* and is automatically assigned to a container when it is started. If that also does not work, run `docker kill <container_name>`. 
 
 ## 6. Opening container terminal
 Executing `docker run` with this image will turn the terminal into the output of the jupyter kernel where you won't be able to enter futher commands. Should you want to enter the terminal of the running container, execute 
