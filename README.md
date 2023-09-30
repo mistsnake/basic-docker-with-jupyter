@@ -7,7 +7,7 @@ Before continuing, open Docker and make sure it is running.
 ## 2. Download this repository's files
 In order to continue to create the Docker image and container, download this repository's `jupyter-testing-main` file.
 
-Before continuing, make sure you are in the `jupyter-testing-main` directory in your device.
+Before continuing, make sure you are in the `jupyter-testing-main` directory in your device (you can change the name of this directory if you like).
 
 ## 3. Creating the image
 
