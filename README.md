@@ -10,6 +10,9 @@ In order to continue to create the Docker image and container, download this rep
 Before continuing, make sure you are in the `jupyter-testing-main` directory in your device.
 
 ## 3. Creating the image
+
+**If wanting to upload image to Docker, have your `<image_name>` be `docker_username/repository_name` in order to upload to Docker Hub** 
+
 Use the following command to build a docker image of name `<image_name>`:
 ```
 docker build -t <image_name> .
